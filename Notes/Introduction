@@ -1,0 +1,22 @@
+Basic structure of a systemC file:
+
+SC_MODULE(<module name>) // systemC class
+{
+    SC_CTOR(<module name>) //constructor
+    {
+        //member initialisation
+        SC_METHOD(<method name>);
+        SC_THREAD(<thread name>);
+    }
+};
+
+int sc_main(int argc, char** argv)
+{
+  <module name> obj("<insance name>"); //Create object of SC class
+  sc_start();
+  sc_stop();
+   
+  return 0;
+}
+
+
